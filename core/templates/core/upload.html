@@ -1,0 +1,54 @@
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+</head>
+<body>
+    <h1>Upload a File</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Select File:</label>
+        <input type="file" name="file" required><br><br>
+
+        <button type="submit">Send to Admin</button>
+    </form>
+
+    <br>
+    <a href="{% url 'file_list' %}">See Uploaded Files</a>
+</body>
+</html> {% endcomment %}
+
+
+
+
+
+{% comment %} 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+</head>
+<body>
+    <h1>Upload a File</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Select File:</label>
+        <input type="file" name="file" required><br><br>
+        <button type="submit">Send to Admin</button>
+    </form>
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html>
+<head><title>Upload File</title></head>
+<body>
+  <h2>Upload a File</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>
