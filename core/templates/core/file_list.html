@@ -1,31 +1,3 @@
-{% comment %} <!DOCTYPE html>
-<html>
-<head>
-    <title>Uploaded Files</title>
-</head>
-<body>
-    <h1>Uploaded Files List</h1>
-    <ul>
-        {% for file in files %}
-            <li>
-                {{ file.user.username }} - 
-                <a href="{{ file.file.url }}" download>
-                    Download {{ file.file.name|slice:"-20:" }}
-                </a>
-                ({{ file.file.name|cut:"uploads/" }})
-            </li>
-        {% empty %}
-            <li>No files uploaded yet.</li>
-        {% endfor %}
-    </ul>
-
-    <br>
-    <a href="{% url 'upload' %}">Upload New File</a>
-</body>
-</html> {% endcomment %}
-
-
-
 <!DOCTYPE html>
 <html>
 <head><title>Files</title></head>
